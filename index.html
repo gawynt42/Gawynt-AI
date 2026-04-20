@@ -16,7 +16,7 @@
 html,body{height:100%;overflow:hidden}
 body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;display:flex;flex-direction:column}
 
-/* ── HEADER ── */
+/* HEADER */
 .hdr{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;
   background:var(--surface);border-bottom:1px solid var(--border);flex-shrink:0;z-index:10}
 .logo{display:flex;align-items:center;gap:10px}
@@ -35,10 +35,10 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,san
   box-shadow:0 0 8px #22c55e88;animation:blink 2s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.4}}
 
-/* ── LAYOUT ── */
+/* LAYOUT */
 .main{display:flex;flex:1;overflow:hidden}
 
-/* ── SIDEBAR ── */
+/* SIDEBAR */
 .sidebar{width:250px;background:var(--surface);border-right:1px solid var(--border);
   display:flex;flex-direction:column;flex-shrink:0}
 .sb-hdr{padding:12px 14px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
@@ -59,13 +59,13 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,san
   border:1px solid var(--border);color:var(--muted);cursor:pointer;font-size:12px;transition:all .2s}
 .clear-btn:hover{border-color:var(--danger);color:var(--danger)}
 
-/* ── CHAT AREA ── */
+/* CHAT */
 .chat-area{flex:1;display:flex;flex-direction:column;overflow:hidden}
 .msgs{flex:1;overflow-y:auto;padding:24px 20px;display:flex;flex-direction:column;gap:14px}
 .msgs::-webkit-scrollbar{width:4px}
 .msgs::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
 
-/* ── BUBBLES ── */
+/* BUBBLES */
 .msg{display:flex;gap:11px;max-width:800px;animation:fadeUp .25s ease}
 @keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 .msg.u{margin-left:auto;flex-direction:row-reverse}
@@ -84,7 +84,7 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,san
 .dots span:nth-child(3){animation-delay:.4s}
 @keyframes db{0%,80%,100%{transform:scale(.6);opacity:.4}40%{transform:scale(1);opacity:1}}
 
-/* ── INPUT ── */
+/* INPUT */
 .inp-area{padding:14px 18px;background:var(--surface);border-top:1px solid var(--border);flex-shrink:0}
 .inp-row{display:flex;gap:9px;align-items:flex-end}
 .inp-mic{width:44px;height:44px;border-radius:11px;background:var(--surface2);border:1px solid var(--border);
@@ -100,7 +100,7 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,san
 .send:hover{background:var(--accent2);box-shadow:0 0 14px var(--glow);transform:scale(1.05)}
 .send:disabled{opacity:.35;cursor:not-allowed;transform:none}
 
-/* ── WELCOME ── */
+/* WELCOME */
 .welcome{display:flex;flex-direction:column;align-items:center;justify-content:center;
   flex:1;gap:14px;padding:40px;text-align:center}
 .wl-icon{font-size:62px;animation:float 3s ease-in-out infinite}
@@ -109,9 +109,9 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,san
   -webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .wl-sub{color:var(--muted);font-size:14px;max-width:380px;line-height:1.6}
 
-/* ── MIC PERMISSION MODAL ── */
+/* MIC PERMISSION MODAL */
 .mic-overlay{position:fixed;inset:0;background:rgba(0,0,0,.75);backdrop-filter:blur(6px);
-  z-index:999;display:flex;align-items:center;justify-content:center;animation:fadeUp .2s ease}
+  z-index:999;display:flex;align-items:center;justify-content:center}
 .mic-overlay.hidden{display:none}
 .mic-modal{background:var(--surface);border:1px solid var(--border);border-radius:20px;
   padding:36px 32px;max-width:420px;width:90%;text-align:center;
@@ -119,10 +119,10 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,san
 .mic-icon{font-size:56px;margin-bottom:12px;animation:float 2.5s ease-in-out infinite}
 .mic-modal h3{font-size:20px;font-weight:700;margin-bottom:8px;
   background:linear-gradient(135deg,#a78bfa,#c084fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.mic-modal p{color:var(--muted);font-size:14px;line-height:1.6;margin-bottom:24px}
-.mic-modal .mic-bullets{text-align:left;margin-bottom:22px;display:flex;flex-direction:column;gap:8px}
-.mic-modal .mic-bullet{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--muted)}
-.mic-modal .mic-bullet span:first-child{font-size:16px;flex-shrink:0;margin-top:1px}
+.mic-modal p{color:var(--muted);font-size:14px;line-height:1.6;margin-bottom:20px}
+.mic-bullets{text-align:left;margin-bottom:22px;display:flex;flex-direction:column;gap:8px}
+.mic-bullet{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--muted)}
+.mic-bullet span:first-child{font-size:16px;flex-shrink:0;margin-top:1px}
 .mic-allow{width:100%;padding:13px;border-radius:12px;background:var(--accent);color:#fff;
   border:none;font-size:15px;font-weight:700;cursor:pointer;transition:all .2s;margin-bottom:10px}
 .mic-allow:hover{background:var(--accent2);box-shadow:0 0 18px var(--glow)}
@@ -131,7 +131,7 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,san
 .mic-deny:hover{border-color:var(--danger);color:var(--danger)}
 .mic-status{margin-top:14px;font-size:13px;color:var(--muted);min-height:20px}
 
-/* ── VOICE CALL ── */
+/* VOICE CALL */
 .voice-page{flex:1;display:none;flex-direction:column;align-items:center;justify-content:center;gap:28px;padding:20px}
 .voice-page.show{display:flex}
 .vc-title{text-align:center}
@@ -173,8 +173,6 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,san
 .vc-mute.on{background:#450a0a;border-color:var(--danger);color:var(--danger)}
 .vc-replay{background:var(--surface2);border:1px solid var(--border);color:var(--text)}
 .vc-hint{font-size:12px;color:var(--muted);text-align:center}
-
-/* browser notice */
 .browser-warn{display:none;background:#451a03;border:1px solid #92400e;border-radius:10px;
   padding:12px 16px;font-size:13px;color:#fcd34d;text-align:center;max-width:500px}
 .browser-warn.show{display:block}
@@ -183,6 +181,23 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,san
 </style>
 </head>
 <body>
+
+<!-- MIC PERMISSION MODAL -->
+<div class="mic-overlay hidden" id="micOverlay">
+  <div class="mic-modal">
+    <div class="mic-icon">🎤</div>
+    <h3>Microphone Access</h3>
+    <p>Gawynt AI needs microphone permission to use voice features.</p>
+    <div class="mic-bullets">
+      <div class="mic-bullet"><span>🎙️</span><span>Voice input in chat — speak instead of typing</span></div>
+      <div class="mic-bullet"><span>📞</span><span>Voice Call mode — have a full spoken conversation</span></div>
+      <div class="mic-bullet"><span>🔒</span><span>Audio is never stored or sent anywhere — processed locally in your browser</span></div>
+    </div>
+    <button class="mic-allow" onclick="grantMic()">Allow Microphone Access</button>
+    <button class="mic-deny" onclick="denyMic()">Not Now</button>
+    <div class="mic-status" id="micModalStatus"></div>
+  </div>
+</div>
 
 <!-- HEADER -->
 <div class="hdr">
@@ -197,24 +212,7 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,san
     <button class="tab on" id="tChat" onclick="switchMode('chat')">💬 Chat</button>
     <button class="tab" id="tVoice" onclick="switchMode('voice')">🎙️ Voice Call</button>
   </div>
-  <div class="online" id="onlineDot" title="Online"></div>
-</div>
-
-<!-- MIC PERMISSION MODAL -->
-<div class="mic-overlay hidden" id="micOverlay">
-  <div class="mic-modal">
-    <div class="mic-icon">🎤</div>
-    <h3>Microphone Access</h3>
-    <p>Gawynt AI needs microphone permission to use voice features. Here's how it's used:</p>
-    <div class="mic-bullets">
-      <div class="mic-bullet"><span>🎙️</span><span>Voice input in chat — speak instead of typing</span></div>
-      <div class="mic-bullet"><span>📞</span><span>Voice Call mode — have a full spoken conversation</span></div>
-      <div class="mic-bullet"><span>🔒</span><span>Audio is never stored or sent anywhere — processed locally in your browser</span></div>
-    </div>
-    <button class="mic-allow" onclick="grantMic()">Allow Microphone Access</button>
-    <button class="mic-deny" onclick="denyMic()">Not Now</button>
-    <div class="mic-status" id="micModalStatus"></div>
-  </div>
+  <div class="online" title="Online"></div>
 </div>
 
 <!-- MAIN -->
@@ -238,7 +236,7 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,san
         <button class="inp-mic" id="micBtn" onclick="toggleChatMic()" title="Voice input">🎤</button>
         <textarea class="inp-box" id="box" placeholder="Message Gawynt AI…" rows="1"
           onkeydown="onKey(event)" oninput="resize(this)"></textarea>
-        <button class="send" id="sendBtn" onclick="send()">➤</button>
+        <button class="send" id="sendBtn" onclick="send()">&#10148;</button>
       </div>
     </div>
   </div>
@@ -249,11 +247,9 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,san
       <h2>Gawynt AI Voice Call</h2>
       <p id="vcSub">Tap the orb or the call button to begin</p>
     </div>
-
     <div class="browser-warn" id="browserWarn">
-      ⚠️ Voice recognition requires <strong>Chrome, Edge, or Safari</strong> on desktop/Android. Firefox is not supported.
+      ⚠️ Voice recognition requires <strong>Chrome, Edge, or Safari</strong>. Firefox is not supported.
     </div>
-
     <div class="orb-wrap">
       <div class="orb" id="orb" onclick="toggleCall()">
         <div class="rings">
@@ -262,60 +258,127 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,san
         🤖
       </div>
     </div>
-
     <div class="vc-status" id="vcStatus">Ready</div>
     <div class="vc-text" id="vcText">Press the orb or 📞 to start speaking with Gawynt AI</div>
-
     <div class="vc-btns">
-      <button class="vc-btn vc-mute" id="muteBtn" onclick="toggleMute()" title="Mute/Unmute">🎤</button>
+      <button class="vc-btn vc-mute" id="muteBtn" onclick="toggleMute()" title="Mute">🎤</button>
       <button class="vc-btn vc-call" id="callBtn" onclick="toggleCall()">📞</button>
-      <button class="vc-btn vc-replay" onclick="replayLast()" title="Replay last response">🔊</button>
+      <button class="vc-btn vc-replay" onclick="replayLast()" title="Replay">🔊</button>
     </div>
     <div class="vc-hint" id="vcHint"></div>
   </div>
 
-</div><!-- /main -->
+</div>
 
 <script>
-/* =====================================================================
-   GAWYNT AI  –  No API key  –  Powered by pollinations.ai (free)
-   GitHub Pages ready: pure static HTML, no build step needed
-   ===================================================================== */
+// ================================================================
+//  GAWYNT AI — No API key — GitHub Pages ready
+// ================================================================
 
-// ── Storage helpers ──
+// Storage
 const STORE_KEY = 'gawynt_chats_v2';
 let chats = {};
-function loadStore(){ try{ chats = JSON.parse(localStorage.getItem(STORE_KEY)||'{}') }catch(e){ chats={} } }
+function loadStore(){ try{ chats=JSON.parse(localStorage.getItem(STORE_KEY)||'{}') }catch(e){ chats={} } }
 function saveStore(){ try{ localStorage.setItem(STORE_KEY,JSON.stringify(chats)) }catch(e){} }
 
-// ── State ──
 let currentId = null;
 let busy = false;
 
-// ── Identity detection ──
-const ID_WORDS = ['your name','who are you','what are you','your identity','introduce yourself',
-  "what's your name","whats your name",'about you','who made you','who created you',
-  'your creator','what ai','which ai','your model','your version','are you an ai'];
-const isIdentity = t => ID_WORDS.some(k => t.toLowerCase().includes(k));
+// ── Identity — ALL handled locally, NEVER sent to AI ──
+const ID_PATTERNS = [
+  'your name','who are you','what are you','your identity','introduce yourself',
+  "what's your name","whats your name","what is your name",
+  'about you','who made you','who created you','who built you','who developed you',
+  'your creator','your maker','your developer','your owner','your author',
+  'what ai','which ai','what model','your model','your version','what version',
+  'are you an ai','are you a bot','are you real','are you chatgpt','are you gpt',
+  'are you claude','are you gemini','are you llama','are you mistral',
+  'powered by','built on','based on','underlying model','what technology',
+  'openai','anthropic','google ai','meta ai','who owns you',
+  'gawynt','tell me about yourself','describe yourself'
+];
+const isIdentity = t => { const l=t.toLowerCase(); return ID_PATTERNS.some(k=>l.includes(k)); };
+
 function identityReply(t){
-  const l = t.toLowerCase();
-  if(l.includes('name')) return "My name is **Gawynt AI**! I'm your intelligent AI assistant, always here to help. 😊";
-  if(l.includes('made')||l.includes('creat')) return "I'm **Gawynt AI** — a powerful AI assistant built to help you with anything you need!";
-  if(l.includes('version')||l.includes('model')) return "I'm **Gawynt AI**. I don't have a version number — I just keep getting better!";
-  return "I'm **Gawynt AI**, your personal intelligent assistant! Ask me anything. 🚀";
+  const l=t.toLowerCase();
+  if(l.includes('chatgpt')||l.includes('openai')||l.includes('gpt')||l.includes('claude')||
+     l.includes('gemini')||l.includes('llama')||l.includes('mistral')||
+     l.includes('powered by')||l.includes('built on')||l.includes('based on')||
+     l.includes('underlying')||l.includes('technology'))
+    return "I'm **Gawynt AI** — my own unique AI assistant! I'm not ChatGPT, Claude, Gemini, or any other AI. I'm simply Gawynt AI, built to help you. 🤖";
+  if(l.includes('made')||l.includes('creat')||l.includes('built')||l.includes('develop')||l.includes('own'))
+    return "I was created by **Gawynt AI**. I'm your personal intelligent assistant, here to help with anything! 🚀";
+  if(l.includes('name')||l.includes('who are you')||l.includes('what are you'))
+    return "My name is **Gawynt AI**! I'm your intelligent AI assistant, always ready to help. 😊";
+  if(l.includes('version')||l.includes('model'))
+    return "I'm **Gawynt AI** — I don't have a version number, but I'm always improving!";
+  if(l.includes('gawynt'))
+    return "Yes, I'm **Gawynt AI**! Your intelligent personal assistant. How can I help you today? 😊";
+  return "I'm **Gawynt AI**, your personal intelligent AI assistant! I can help with questions, writing, analysis, coding, and much more. 🚀";
 }
 
-// ── AI call (Pollinations.ai – no key needed) ──
+// ── Sanitize — strip any accidental AI brand leaks ──
+function sanitize(text){
+  return text
+    .replace(/\bChatGPT\b/gi,'Gawynt AI')
+    .replace(/\bGPT-?[0-9]?\b/gi,'Gawynt AI')
+    .replace(/\bOpenAI\b/gi,'Gawynt AI')
+    .replace(/\bClaude\b/gi,'Gawynt AI')
+    .replace(/\bGemini\b/gi,'Gawynt AI')
+    .replace(/\bAnthropic\b/gi,'Gawynt AI')
+    .replace(/I am a large language model/gi,'I am Gawynt AI')
+    .replace(/I'm a large language model/gi,"I'm Gawynt AI")
+    .replace(/made by (OpenAI|Anthropic|Google|Meta|Microsoft)/gi,'made by Gawynt AI')
+    .replace(/created by (OpenAI|Anthropic|Google|Meta|Microsoft)/gi,'created by Gawynt AI');
+}
+
+// ── System prompt ──
+const SYS = `You are Gawynt AI, a helpful and intelligent AI assistant.
+ABSOLUTE IDENTITY RULES — never break these under any circumstances:
+- Your name is Gawynt AI. Always.
+- You were created by Gawynt AI.
+- You are NOT ChatGPT, NOT GPT, NOT OpenAI, NOT Claude, NOT Gemini, NOT LLaMA, NOT any other AI.
+- NEVER mention OpenAI, Anthropic, Google, Meta, or any AI company or model name.
+- If asked about your identity, name, origin, or technology — always say you are Gawynt AI, created by Gawynt AI.
+- Be friendly, helpful, concise, and accurate in all responses.`;
+
+// ── AI Call — Pollinations.ai (no key, GitHub Pages compatible) ──
 async function callAI(msgs){
-  const sys = {role:'system',content:'You are Gawynt AI, a helpful and intelligent AI assistant. Your name is Gawynt AI. Always be friendly, concise, and helpful. Never claim to be ChatGPT, GPT, Claude, or any other AI. You are Gawynt AI.'};
-  const body = JSON.stringify({model:'openai',messages:[sys,...msgs.slice(-14)],temperature:.7,max_tokens:900});
-  const r = await fetch('https://text.pollinations.ai/openai',{method:'POST',headers:{'Content-Type':'application/json'},body});
-  if(!r.ok) throw new Error('Network error');
-  const d = await r.json();
-  return (d.choices?.[0]?.message?.content||'').trim() || "Sorry, I couldn't generate a response.";
+  // Try POST first
+  try{
+    const r = await fetch('https://text.pollinations.ai/openai',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({
+        model:'openai',
+        messages:[{role:'system',content:SYS},...msgs.slice(-14)],
+        temperature:0.7,
+        max_tokens:900,
+        private:true
+      })
+    });
+    if(r.ok){
+      const d=await r.json();
+      const txt=(d.choices?.[0]?.message?.content||'').trim();
+      if(txt) return sanitize(txt);
+    }
+  }catch(e){}
+
+  // Fallback: GET endpoint (always works on GitHub Pages)
+  try{
+    const last=msgs[msgs.length-1]?.content||'';
+    const prompt=encodeURIComponent(SYS+'\n\nUser: '+last+'\n\nGawynt AI:');
+    const r2=await fetch(`https://text.pollinations.ai/${prompt}?model=openai&nologo=true`);
+    if(r2.ok){
+      const txt=(await r2.text()).trim();
+      if(txt) return sanitize(txt);
+    }
+  }catch(e){}
+
+  throw new Error('Could not reach AI');
 }
 
-// ── Render helpers ──
+// ── Helpers ──
 function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') }
 function fmt(s){
   return s
@@ -324,7 +387,7 @@ function fmt(s){
     .replace(/`([^`\n]+)`/g,'<code style="background:#2a2a3d;padding:2px 6px;border-radius:4px;font-size:13px">$1</code>')
     .replace(/\n/g,'<br>');
 }
-function timeFmt(ts){
+function timeAgo(ts){
   const s=(Date.now()-ts)/1000;
   if(s<60)return'Just now';if(s<3600)return Math.floor(s/60)+'m ago';
   if(s<86400)return Math.floor(s/3600)+'h ago';return Math.floor(s/86400)+'d ago';
@@ -333,28 +396,25 @@ function bubble(role,text){
   const u=role==='user';
   return `<div class="msg ${u?'u':'a'}">
     <div class="av">${u?'👤':'🤖'}</div>
-    <div class="bub">
-      <div class="bub-name">${u?'You':'Gawynt AI'}</div>
-      <div>${fmt(text)}</div>
-    </div>
+    <div class="bub"><div class="bub-name">${u?'You':'Gawynt AI'}</div><div>${fmt(text)}</div></div>
   </div>`;
 }
+function sleep(ms){ return new Promise(r=>setTimeout(r,ms)); }
 
 // ── Sidebar ──
 function renderSidebar(){
-  const el = document.getElementById('chatList');
-  const sorted = Object.entries(chats).sort((a,b)=>b[1].t-a[1].t);
-  el.innerHTML = sorted.map(([id,c])=>`
+  const el=document.getElementById('chatList');
+  el.innerHTML=Object.entries(chats).sort((a,b)=>b[1].t-a[1].t).map(([id,c])=>`
     <div class="ci ${id===currentId?'on':''}" onclick="loadChat('${id}')">
       <div class="ci-title">💬 ${esc(c.title||'New Chat')}</div>
-      <div class="ci-time">${timeFmt(c.t)}</div>
+      <div class="ci-time">${timeAgo(c.t)}</div>
     </div>`).join('');
 }
 
 // ── Messages ──
 function renderMsgs(){
-  const el = document.getElementById('msgs');
-  const c = chats[currentId];
+  const el=document.getElementById('msgs');
+  const c=chats[currentId];
   if(!c||!c.msgs||c.msgs.length===0){
     el.innerHTML=`<div class="welcome">
       <div class="wl-icon">🤖</div>
@@ -363,16 +423,14 @@ function renderMsgs(){
     </div>`;
     return;
   }
-  el.innerHTML = c.msgs.map(m=>bubble(m.r,m.c)).join('');
+  el.innerHTML=c.msgs.map(m=>bubble(m.r,m.c)).join('');
   el.scrollTop=el.scrollHeight;
 }
 
-// ── New / Load chat ──
 function newChat(){
   const id='c'+Date.now();
   chats[id]={title:'New Chat',t:Date.now(),msgs:[]};
-  saveStore(); currentId=id;
-  renderSidebar(); renderMsgs();
+  saveStore(); currentId=id; renderSidebar(); renderMsgs();
 }
 function loadChat(id){ currentId=id; renderSidebar(); renderMsgs(); }
 function clearAll(){
@@ -386,9 +444,7 @@ async function send(override){
   const text=(override||box.value).trim();
   if(!text||busy)return;
   box.value=''; resize(box);
-  if(!currentId)newChat();
-
-  // remove welcome screen
+  if(!currentId) newChat();
   document.querySelector('.welcome')?.remove();
 
   chats[currentId].msgs.push({r:'user',c:text});
@@ -401,16 +457,17 @@ async function send(override){
   const tid='t'+Date.now();
   el.insertAdjacentHTML('beforeend',`<div class="msg a" id="${tid}">
     <div class="av">🤖</div>
-    <div class="bub"><div class="bub-name">Gawynt AI</div><div class="dots"><span></span><span></span><span></span></div></div>
+    <div class="bub"><div class="bub-name">Gawynt AI</div>
+    <div class="dots"><span></span><span></span><span></span></div></div>
   </div>`);
   el.scrollTop=el.scrollHeight;
   busy=true; document.getElementById('sendBtn').disabled=true;
 
   let reply;
   try{
-    if(isIdentity(text)){ await sleep(500); reply=identityReply(text); }
+    if(isIdentity(text)){ await sleep(400); reply=identityReply(text); }
     else reply=await callAI(chats[currentId].msgs.map(m=>({role:m.r==='user'?'user':'assistant',content:m.c})));
-  }catch(e){ reply="⚠️ Connection issue. Check your internet and try again."; }
+  }catch(e){ reply='⚠️ Connection issue. Check your internet and try again.'; }
 
   document.getElementById(tid)?.remove();
   chats[currentId].msgs.push({r:'ai',c:reply});
@@ -419,278 +476,184 @@ async function send(override){
   el.scrollTop=el.scrollHeight;
   busy=false; document.getElementById('sendBtn').disabled=false;
 }
-function suggest(t){ document.getElementById('box').value=t; send(t); }
-function sleep(ms){ return new Promise(r=>setTimeout(r,ms)); }
 
-// ── Input helpers ──
 function onKey(e){ if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();send();} }
 function resize(el){ el.style.height='auto'; el.style.height=Math.min(el.scrollHeight,130)+'px'; }
 
 // ── Mic Permission ──
-let micGranted = localStorage.getItem('gawynt_mic') === 'granted';
-let pendingVoiceAction = null; // 'chat' | 'call'
+let micGranted=localStorage.getItem('gawynt_mic')==='granted';
+let pendingAction=null;
 
-function showMicModal(action){
-  pendingVoiceAction = action;
-  document.getElementById('micOverlay').classList.remove('hidden');
-  document.getElementById('micModalStatus').textContent = '';
-}
+function showMicModal(action){ pendingAction=action; document.getElementById('micOverlay').classList.remove('hidden'); document.getElementById('micModalStatus').textContent=''; }
 function hideMicModal(){ document.getElementById('micOverlay').classList.add('hidden'); }
 
 async function grantMic(){
-  document.getElementById('micModalStatus').textContent = 'Requesting permission…';
+  document.getElementById('micModalStatus').textContent='Requesting permission…';
   try{
-    const stream = await navigator.mediaDevices.getUserMedia({audio:true});
-    // stop tracks immediately — we just needed the permission
+    const stream=await navigator.mediaDevices.getUserMedia({audio:true});
     stream.getTracks().forEach(t=>t.stop());
-    micGranted = true;
-    localStorage.setItem('gawynt_mic','granted');
-    document.getElementById('micModalStatus').textContent = '✅ Microphone access granted!';
+    micGranted=true; localStorage.setItem('gawynt_mic','granted');
+    document.getElementById('micModalStatus').textContent='✅ Microphone access granted!';
     setTimeout(()=>{
       hideMicModal();
-      if(pendingVoiceAction==='chat') _startChatMic();
-      else if(pendingVoiceAction==='call') startCall();
-      pendingVoiceAction=null;
-    }, 700);
+      if(pendingAction==='chat') _startChatMic();
+      else if(pendingAction==='call') startCall();
+      pendingAction=null;
+    },700);
   }catch(err){
-    micGranted = false;
-    localStorage.removeItem('gawynt_mic');
-    document.getElementById('micModalStatus').textContent = '🚫 Permission denied. Please allow mic in your browser settings.';
+    micGranted=false; localStorage.removeItem('gawynt_mic');
+    document.getElementById('micModalStatus').textContent='🚫 Permission denied. Please allow mic in browser settings.';
   }
 }
-function denyMic(){
-  hideMicModal(); pendingVoiceAction=null;
-}
+function denyMic(){ hideMicModal(); pendingAction=null; }
 
-// ── Chat mic (voice input only) ──
+// ── Chat Mic ──
 let chatMicOn=false, chatRec=null;
-function toggleChatMic(){
-  if(!micGranted){ showMicModal('chat'); return; }
-  _startChatMic();
-}
+function toggleChatMic(){ if(!micGranted){ showMicModal('chat'); return; } _startChatMic(); }
 function _startChatMic(){
   const SRc=window.SpeechRecognition||window.webkitSpeechRecognition;
   if(!SRc){ alert('Voice input needs Chrome, Edge, or Safari.'); return; }
   const btn=document.getElementById('micBtn');
-  if(chatMicOn){
-    chatRec?.abort(); chatMicOn=false;
-    btn.classList.remove('on'); btn.textContent='🎤'; return;
-  }
+  if(chatMicOn){ chatRec?.abort(); chatMicOn=false; btn.classList.remove('on'); btn.textContent='🎤'; return; }
   chatRec=new SRc(); chatRec.lang='en-US'; chatRec.interimResults=true;
   chatRec.onresult=e=>{
-    let f='',interim='';
-    for(let i=e.resultIndex;i<e.results.length;i++){
-      if(e.results[i].isFinal)f+=e.results[i][0].transcript;
-      else interim+=e.results[i][0].transcript;
+    let f='',i='';
+    for(let j=e.resultIndex;j<e.results.length;j++){
+      if(e.results[j].isFinal)f+=e.results[j][0].transcript; else i+=e.results[j][0].transcript;
     }
-    document.getElementById('box').value=f||interim;
-    resize(document.getElementById('box'));
+    document.getElementById('box').value=f||i; resize(document.getElementById('box'));
   };
   chatRec.onend=()=>{ chatMicOn=false; btn.classList.remove('on'); btn.textContent='🎤'; };
   chatRec.onerror=()=>{ chatMicOn=false; btn.classList.remove('on'); btn.textContent='🎤'; };
   chatRec.start(); chatMicOn=true; btn.classList.add('on'); btn.textContent='⏹';
 }
 
-// ════════════════════════════════════════════════════════════
-//  VOICE CALL ENGINE  (completely rewritten)
-// ════════════════════════════════════════════════════════════
-const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-let callOn=false, muted=false;
-let vcRec=null, vcRecBusy=false;
-let lastSpoken='';
-let vcMsgHistory=[];
+// ================================================================
+//  VOICE CALL ENGINE
+// ================================================================
+const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+let callOn=false, muted=false, vcRec=null, vcRecBusy=false;
+let lastSpoken='', vcHistory=[];
 const synth=window.speechSynthesis;
-let speakingUtterance=null;
 
-function hasSR(){ return !!SR; }
-
-function orbClass(c){
-  const o=document.getElementById('orb');
-  o.classList.remove('speak','listen');
-  if(c) o.classList.add(c);
-}
+function orbCls(c){ const o=document.getElementById('orb'); o.classList.remove('speak','listen'); if(c)o.classList.add(c); }
 function setStatus(s){ document.getElementById('vcStatus').textContent=s; }
-function setSubtitle(s){ document.getElementById('vcSub').textContent=s; }
-function setVcText(html){ document.getElementById('vcText').innerHTML=html; }
+function setSub(s){ document.getElementById('vcSub').textContent=s; }
+function setVcText(h){ document.getElementById('vcText').innerHTML=h; }
 function setHint(s){ document.getElementById('vcHint').textContent=s; }
 
-// ── Start / End call ──
-function toggleCall(){ callOn ? endCall() : (micGranted ? startCall() : showMicModal('call')); }
+function toggleCall(){ callOn?endCall():(micGranted?startCall():showMicModal('call')); }
 
 function startCall(){
-  if(!hasSR()){
-    document.getElementById('browserWarn').classList.add('show');
-    setStatus('Not supported'); setSubtitle('Please use Chrome, Edge, or Safari');
-    return;
-  }
-  callOn=true; muted=false; vcMsgHistory=[];
-  document.getElementById('callBtn').classList.add('end');
-  document.getElementById('callBtn').textContent='📵';
-  document.getElementById('muteBtn').classList.remove('on');
-  document.getElementById('muteBtn').textContent='🎤';
-  setSubtitle('Call active – speak to Gawynt AI');
-  setHint('Tip: wait for the orb to turn red before speaking');
-  setStatus('Starting…');
-  orbClass(null);
-  setTimeout(()=>vcListen(), 400);
+  if(!SR){ document.getElementById('browserWarn').classList.add('show'); setStatus('Not supported'); return; }
+  callOn=true; muted=false; vcHistory=[];
+  document.getElementById('callBtn').classList.add('end'); document.getElementById('callBtn').textContent='📵';
+  document.getElementById('muteBtn').classList.remove('on'); document.getElementById('muteBtn').textContent='🎤';
+  setSub('Call active — speak to Gawynt AI');
+  setHint('Wait for the orb to turn red, then speak');
+  setStatus('Starting…'); orbCls(null);
+  setTimeout(vcListen,500);
 }
 
 function endCall(){
-  callOn=false;
-  stopListening();
-  stopSpeaking();
-  orbClass(null);
-  document.getElementById('callBtn').classList.remove('end');
-  document.getElementById('callBtn').textContent='📞';
-  setStatus('Ready'); setSubtitle('Tap the orb or call button to begin');
-  setVcText('Press the orb or 📞 to start speaking with Gawynt AI');
-  setHint('');
+  callOn=false; stopRec(); stopSpeak(); orbCls(null);
+  document.getElementById('callBtn').classList.remove('end'); document.getElementById('callBtn').textContent='📞';
+  setStatus('Ready'); setSub('Tap the orb or call button to begin');
+  setVcText('Press the orb or 📞 to start speaking with Gawynt AI'); setHint('');
 }
 
-// ── Speech recognition loop ──
 function vcListen(){
   if(!callOn||muted||vcRecBusy) return;
-  stopListening();
+  stopRec();
   try{
     vcRec=new SR();
-    vcRec.lang='en-US';
-    vcRec.interimResults=true;
-    vcRec.continuous=false;    // single utterance — most reliable cross-browser
-    vcRec.maxAlternatives=1;
+    vcRec.lang='en-US'; vcRec.interimResults=true; vcRec.continuous=false; vcRec.maxAlternatives=1;
     vcRecBusy=true;
+    let final='';
 
-    let finalText='';
-    let gotSpeech=false;
-
-    vcRec.onstart=()=>{
-      orbClass('listen');
-      setStatus('Listening…');
-      setVcText('<span style="color:var(--muted)">Listening… speak now 🎤</span>');
-    };
-
-    vcRec.onspeechstart=()=>{ gotSpeech=true; };
-
+    vcRec.onstart=()=>{ orbCls('listen'); setStatus('Listening…'); setVcText('<span style="color:var(--muted)">Listening… speak now 🎤</span>'); };
     vcRec.onresult=e=>{
-      let interim=''; finalText='';
+      let interim=''; final='';
       for(let i=e.resultIndex;i<e.results.length;i++){
-        if(e.results[i].isFinal) finalText+=e.results[i][0].transcript;
-        else interim+=e.results[i][0].transcript;
+        if(e.results[i].isFinal)final+=e.results[i][0].transcript; else interim+=e.results[i][0].transcript;
       }
-      const show=finalText||interim;
-      setVcText(`<span style="color:var(--muted);font-size:12px">You said:</span><br>${esc(show)}`);
+      setVcText(`<span style="color:var(--muted);font-size:12px">You said:</span><br>${esc(final||interim)}`);
     };
-
     vcRec.onend=()=>{
       vcRecBusy=false;
-      if(!callOn) return;
-      if(finalText.trim()){
-        processVoiceInput(finalText.trim());
-      } else {
-        // nothing heard – listen again after brief pause
-        orbClass(null); setStatus('Listening…');
-        setTimeout(()=>{ if(callOn&&!muted) vcListen(); },300);
-      }
+      if(!callOn)return;
+      if(final.trim()) processVC(final.trim());
+      else{ orbCls(null); setTimeout(()=>{ if(callOn&&!muted)vcListen(); },300); }
     };
-
     vcRec.onerror=e=>{
       vcRecBusy=false;
       if(e.error==='not-allowed'||e.error==='service-not-allowed'){
-        setStatus('Mic blocked'); setVcText('🚫 Microphone permission denied. Please allow mic access and refresh.');
-        orbClass(null); callOn=false;
-        document.getElementById('callBtn').classList.remove('end');
-        document.getElementById('callBtn').textContent='📞';
+        setStatus('Mic blocked'); setVcText('🚫 Microphone permission denied. Allow mic and refresh.');
+        orbCls(null); callOn=false;
+        document.getElementById('callBtn').classList.remove('end'); document.getElementById('callBtn').textContent='📞';
         return;
       }
-      if(e.error==='network'){
-        setStatus('Network error'); setVcText('⚠️ Speech service network error. Retrying…');
-      }
-      // any other error: retry
-      setTimeout(()=>{ if(callOn&&!muted) vcListen(); },800);
+      setTimeout(()=>{ if(callOn&&!muted)vcListen(); },800);
     };
-
     vcRec.start();
-  }catch(err){
-    vcRecBusy=false;
-    setTimeout(()=>{ if(callOn&&!muted) vcListen(); },1000);
-  }
+  }catch(e){ vcRecBusy=false; setTimeout(()=>{ if(callOn&&!muted)vcListen(); },1000); }
 }
 
-function stopListening(){
-  try{ vcRec?.abort(); }catch(e){}
-  vcRec=null; vcRecBusy=false;
-}
+function stopRec(){ try{ vcRec?.abort(); }catch(e){} vcRec=null; vcRecBusy=false; }
 
-// ── Process voice input & respond ──
-async function processVoiceInput(text){
-  orbClass(null); setStatus('Thinking…');
+async function processVC(text){
+  orbCls(null); setStatus('Thinking…');
   setVcText(`<span style="color:var(--muted);font-size:12px">You:</span><br>${esc(text)}`);
-  vcMsgHistory.push({role:'user',content:text});
+  vcHistory.push({role:'user',content:text});
 
   let reply;
   try{
-    if(isIdentity(text)){
-      await sleep(350);
-      reply=identityReply(text).replace(/\*\*/g,'');
-    } else {
-      reply=(await callAI(vcMsgHistory)).replace(/\*\*(.*?)\*\*/g,'$1').replace(/\*(.*?)\*/g,'$1').replace(/`([^`]+)`/g,'$1');
-    }
-  }catch(e){ reply="I'm having trouble connecting right now. Please check your internet connection."; }
+    if(isIdentity(text)){ await sleep(350); reply=identityReply(text).replace(/\*\*/g,''); }
+    else reply=sanitize(await callAI(vcHistory)).replace(/\*\*(.*?)\*\*/g,'$1').replace(/\*(.*?)\*/g,'$1').replace(/`([^`]+)`/g,'$1');
+  }catch(e){ reply="I'm having trouble connecting. Please check your internet."; }
 
-  vcMsgHistory.push({role:'assistant',content:reply});
+  vcHistory.push({role:'assistant',content:reply});
   lastSpoken=reply;
   await vcSpeak(reply);
   if(callOn&&!muted) vcListen();
 }
 
-// ── TTS ──
 function vcSpeak(text){
   return new Promise(resolve=>{
-    stopSpeaking();
-    orbClass('speak'); setStatus('Gawynt AI speaking…');
+    stopSpeak();
+    orbCls('speak'); setStatus('Gawynt AI speaking…');
     setVcText(`<strong style="color:var(--accent2);font-size:12px">Gawynt AI:</strong><br>${esc(text)}`);
-
-    // Some browsers need voices loaded first
-    const doSpeak=()=>{
+    const go=()=>{
       const utt=new SpeechSynthesisUtterance(text);
-      utt.rate=1.02; utt.pitch=1; utt.volume=1;
+      utt.rate=1.0; utt.pitch=1; utt.volume=1;
       const voices=synth.getVoices();
       const pick=voices.find(v=>v.name.toLowerCase().includes('google')&&v.lang.startsWith('en'))
-               ||voices.find(v=>v.lang.startsWith('en-'))
-               ||voices[0];
-      if(pick) utt.voice=pick;
-      utt.onend=()=>{ orbClass(null); setStatus('Listening…'); resolve(); };
-      utt.onerror=()=>{ orbClass(null); setStatus('Listening…'); resolve(); };
-      speakingUtterance=utt;
+               ||voices.find(v=>v.lang.startsWith('en-'))||voices[0];
+      if(pick)utt.voice=pick;
+      utt.onend=()=>{ orbCls(null); setStatus('Listening…'); resolve(); };
+      utt.onerror=()=>{ orbCls(null); setStatus('Listening…'); resolve(); };
       synth.speak(utt);
     };
-
     if(synth.getVoices().length===0){
-      synth.onvoiceschanged=()=>{ synth.onvoiceschanged=null; doSpeak(); };
-      // fallback if event never fires
-      setTimeout(()=>{ if(synth.getVoices().length>0)doSpeak(); else resolve(); },1500);
-    } else {
-      doSpeak();
-    }
+      synth.onvoiceschanged=()=>{ synth.onvoiceschanged=null; go(); };
+      setTimeout(()=>{ if(synth.getVoices().length>0)go(); else resolve(); },1500);
+    } else go();
   });
 }
-
-function stopSpeaking(){ try{ synth.cancel(); }catch(e){} speakingUtterance=null; }
-
+function stopSpeak(){ try{ synth.cancel(); }catch(e){} }
 function toggleMute(){
   muted=!muted;
   const b=document.getElementById('muteBtn');
   b.classList.toggle('on',muted); b.textContent=muted?'🔇':'🎤';
-  if(muted){ stopListening(); stopSpeaking(); setStatus('Muted'); orbClass(null); }
+  if(muted){ stopRec(); stopSpeak(); setStatus('Muted'); orbCls(null); }
   else if(callOn){ setStatus('Listening…'); vcListen(); }
 }
-
 function replayLast(){
   if(!lastSpoken){ setHint('Nothing to replay yet.'); return; }
-  stopListening();
-  vcSpeak(lastSpoken).then(()=>{ if(callOn&&!muted) vcListen(); });
+  stopRec(); vcSpeak(lastSpoken).then(()=>{ if(callOn&&!muted)vcListen(); });
 }
 
-// ── Mode switch ──
+// ── Mode Switch ──
 function switchMode(m){
   const isChat=m==='chat';
   document.getElementById('tChat').classList.toggle('on',isChat);
@@ -700,26 +663,22 @@ function switchMode(m){
   const vp=document.getElementById('voicePage');
   vp.style.display=!isChat?'flex':'none';
   vp.classList.toggle('show',!isChat);
-  if(isChat&&callOn) endCall();
+  if(isChat&&callOn)endCall();
 }
 
-// ── INIT ──
+// ── Init ──
 (function(){
   loadStore();
-  // Check SR support
-  if(!hasSR()) document.getElementById('browserWarn').classList.add('show');
-  // Check mic permission state via Permissions API if available
+  if(!SR) document.getElementById('browserWarn').classList.add('show');
   if(navigator.permissions){
-    navigator.permissions.query({name:'microphone'}).then(res=>{
-      if(res.state==='granted'){ micGranted=true; localStorage.setItem('gawynt_mic','granted'); }
-      else if(res.state==='denied'){ micGranted=false; localStorage.removeItem('gawynt_mic'); }
+    navigator.permissions.query({name:'microphone'}).then(r=>{
+      if(r.state==='granted'){ micGranted=true; localStorage.setItem('gawynt_mic','granted'); }
+      else if(r.state==='denied'){ micGranted=false; localStorage.removeItem('gawynt_mic'); }
     }).catch(()=>{});
   }
-  // Load most recent chat
   const keys=Object.keys(chats).sort((a,b)=>(chats[b]?.t||0)-(chats[a]?.t||0));
-  if(keys.length){ currentId=keys[0]; }
+  if(keys.length) currentId=keys[0];
   renderSidebar(); renderMsgs();
-  // preload voices
   if(synth) synth.getVoices();
 })();
 </script>
